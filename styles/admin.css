@@ -1,0 +1,125 @@
+        .admin-dashboard {
+            min-height: 100vh;
+            padding: 40px 20px;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        .admin-dashboard:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(108, 92, 231, 0.08) 0%, rgba(162, 155, 254, 0.08) 100%);
+            border-radius: 0 30% 30% 0;
+            z-index: 0;
+        }
+
+        .dashboard-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .dashboard-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            padding: 15px 20px;
+            background: rgba(108, 92,imd 231, 0.05);
+            border-radius: 16px 16px 0 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        .card-header i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .table-responsive {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+            padding: 10px;
+        }
+
+        .btn-action {
+            padding: 5px 10px;
+            font-size: 0.85rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-approve {
+            background: var(--gradient);
+            color: white;
+            border: none;
+        }
+
+        .btn-reject, .btn-delete {
+            background: #e74c3c;
+            color: white;
+            border: none;
+        }
+
+        .btn-ban {
+            background: #f39c12;
+            color: white;
+            border: none;
+        }
+
+        @media (max-width: 991.98px) {
+            .admin-dashboard:before {
+                width: 100%;
+                border-radius: 0;
+                opacity: 0.2;
+            }
+
+            .dashboard-container {
+                padding: 0 15px;
+            }
+
+            .card-header h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .table {
+                font-size: 0.8rem;
+            }
+
+            .btn-action {
+                display: block;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+        }

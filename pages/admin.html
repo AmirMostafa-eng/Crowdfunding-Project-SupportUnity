@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderation - SupportUnity</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+
+</head>
+<body>
+    <section class="admin-dashboard">
+        <div class="dashboard-container">
+            <h1 class="dashboard-title text-center mb-4" style="font-size: 2.5rem; font-weight: 700; color: var(--text-dark);">Moderation</h1>
+            
+            <!-- User Management -->
+            <div class="dashboard-card">
+                <div class="card-header" data-bs-toggle="collapse" data-bs-target="#user-management">
+                    <h3>User Management</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="card-body collapse show" id="user-management">
+                    <p class="dashboard-subtitle mb-3">Approve/reject Campaigner roles and ban users.</p>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>john_doe</td>
+                                    <td>john@example.com</td>
+                                    <td>Pending Campaigner</td>
+                                    <td>Active</td>
+                                    <td>
+                                        <button class="btn btn-action btn-approve me-2" onclick="confirmAction('Approve Campaigner role for john_doe?')">Approve</button>
+                                        <button class="btn btn-action btn-reject me-2" onclick="confirmAction('Reject Campaigner role for john_doe?')">Reject</button>
+                                        <button class="btn btn-action btn-ban" onclick="confirmAction('Ban john_doe?')">Ban</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>jane_smith</td>
+                                    <td>jane@example.com</td>
+                                    <td>Backer</td>
+                                    <td>Active</td>
+                                    <td>
+                                        <button class="btn btn-action btn-ban" onclick="confirmAction('Ban jane_smith?')">Ban</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign Moderation -->
+            <div class="dashboard-card">
+                <div class="card-header" data-bs-toggle="collapse" data-bs-target="#campaign-moderation">
+                    <h3>Campaign Moderation</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="card-body collapse" id="campaign-moderation">
+                    <p class="dashboard-subtitle mb-3">Approve/reject or delete campaigns.</p>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Creator</th>
+                                    <th>Funding Goal</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Nova Pro Smartwatch</td>
+                                    <td>john_doe</td>
+                                    <td>$10,000</td>
+                                    <td>Pending</td>
+                                    <td>
+                                        <button class="btn btn-action btn-approve me-2" onclick="confirmAction('Approve Nova Pro Smartwatch?')">Approve</button>
+                                        <button class="btn btn-action btn-reject me-2" onclick="confirmAction('Reject Nova Pro Smartwatch?')">Reject</button>
+                                        <button class="btn btn-action btn-delete" onclick="confirmAction('Delete Nova Pro Smartwatch?')">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Zenith Ergo Chair</td>
+                                    <td>jane_smith</td>
+                                    <td>$10,000</td>
+                                    <td>Approved</td>
+                                    <td>
+                                        <button class="btn btn-action btn-delete" onclick="confirmAction('Delete Zenith Ergo Chair?')">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Access -->
+            <div class="dashboard-card">
+                <div class="card-header" data-bs-toggle="collapse" data-bs-target="#data-access">
+                    <h3>Data Access</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="card-body collapse" id="data-access">
+                    <p class="dashboard-subtitle mb-3">View all users, campaigns, and pledges.</p>
+                    
+                    <!-- Users Table -->
+                    <h4 class="mb-2">Users</h4>
+                    <div class="table-responsive mb-4">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>john_doe</td>
+                                    <td>john@example.com</td>
+                                    <td>Pending Campaigner</td>
+                                    <td>Active</td>
+                                </tr>
+                                <tr>
+                                    <td>jane_smith</td>
+                                    <td>jane@example.com</td>
+                                    <td>Backer</td>
+                                    <td>Active</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Campaigns Table -->
+                    <h4 class="mb-2">Campaigns</h4>
+                    <div class="table-responsive mb-4">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Creator</th>
+                                    <th>Funding Goal</th>
+                                    <th>Raised</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Nova Pro Smartwatch</td>
+                                    <td>john_doe</td>
+                                    <td>$10,000</td>
+                                    <td>$7,800</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr>
+                                    <td>Zenith Ergo Chair</td>
+                                    <td>jane_smith</td>
+                                    <td>$10,000</td>
+                                    <td>$4,500</td>
+                                    <td>Approved</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pledges Table -->
+                    <h4 class="mb-2">Pledges</h4>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Backer</th>
+                                    <th>Campaign</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>jane_smith</td>
+                                    <td>Nova Pro Smartwatch</td>
+                                    <td>$100</td>
+                                    <td>2025-05-10</td>
+                                </tr>
+                                <tr>
+                                    <td>john_doe</td>
+                                    <td>Zenith Ergo Chair</td>
+                                    <td>$75</td>
+                                    <td>2025-05-12</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="../scripts/admin.js"></script>
+</body>
+</html>
