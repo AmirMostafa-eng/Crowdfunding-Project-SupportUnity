@@ -1,14 +1,3 @@
-function toggleForm(formType) {
-    const loginForm = document.getElementById('login-form');
-    const signupForm = document.getElementById('signup-form');
-    if (formType === 'login') {
-        loginForm.style.display = 'block';
-        signupForm.style.display = 'none';
-    } else {
-        loginForm.style.display = 'none';
-        signupForm.style.display = 'block';
-    }
-}
 
 const trueAction = function (target) {
   target.nextElementSibling.style.display = 'none';
@@ -33,49 +22,97 @@ const checkValid = function(target , pattern){
   }
 }
 // ==========================================================
-
+const url = 'http://localhost:3000';
 // Async function to fetch and return JSON data
-async function getJsonData() {
-  try {
-    const response = await fetch('../db.json'); // Path to your JSON file
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const data = await response.json(); // Parse JSON
-    return data; // Return the data
-  } catch (error) {
-    console.error('Error fetching JSON:', error);
-    return null; // Handle error as needed
-  }
-}
+// async function getJsonData() {
+//   try {
+//     const response = await fetch('../db.json'); // Path to your JSON file
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! Status: ${response.status}`);
+//     }
+//     const data = await response.json(); // Parse JSON
+//     return data; // Return the data
+//   } catch (error) {
+//     console.error('Error fetching JSON:', error);
+//     return null; // Handle error as needed
+//   }
+// }
 
+// async function returningUsers() {
+//   const jsonData = await getJsonData(); 
+//   if (jsonData) {
+//     return jsonData.users; 
+//   } else {
+//     console.log('Failed to load JSON data');
+//   }
+// }
 async function returningUsers() {
-  const jsonData = await getJsonData(); 
-  if (jsonData) {
-    return jsonData.users; 
+  const response = await fetch(`${url}/users`); 
+  if (response) {
+    return response.json(); 
   } else {
     console.log('Failed to load JSON data');
   }
 }
+console.log(returningUsers());
 
 async function returningCampaigns() {
-  const jsonData = await getJsonData(); 
+  const jsonData = await fetch(`${url}/campaigns`); 
   if (jsonData) {
-    return jsonData.campaigns; 
+    return jsonData.json(); 
   } else {
     console.log('Failed to load JSON data');
   }
 }
-
 
 async function returningPledges() {
-  const jsonData = await getJsonData(); 
+  const jsonData = await fetch(`${url}/pledges`); 
   if (jsonData) {
-    return jsonData.pledges; 
+    return jsonData.json(); 
   } else {
     console.log('Failed to load JSON data');
   }
 }
+// ===========
+class User {
+  constructor(id , name , email , password){
+    this.id = id;
+    this.name = name;
+    this.role = "backer";
+    this.isActive = true;
+    this.email = email;
+    this.password = password;
+  }
+}
+
+const addNewUser = async function (name , email , password) {
+  let users = await returningUsers();
+  const usersIds = users.map(user => user.id)
+  // console.log(usersIds.length);
+  const newUser = new User(usersIds.length +1 , name , email ,password);
+
+  const postResponse = await fetch(`http://localhost:3000/users`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newUser)
+  });
+
+  if (!postResponse.ok) {
+      throw new Error(`Failed to add user: ${postResponse.statusText}`);
+    }
+
+    // const result = await postResponse.json();
+    // console.log('New user added:', result);
+    return newUser;
+}
+
+
+
+
+
+
 // =================================================
 
 const switching = function (role) {
@@ -85,11 +122,11 @@ const switching = function (role) {
     break;
 
   case 'campaigner':
-    window.open('../pages/campaigns.html' ,"_self"); // profile..
+    window.open('../pages/form-camp.html' ,"_self"); // profile..
     break;
 
   case 'backer':
-    window.open('../pages/profile.html' ,"_self"); // profile..
+    window.open('../pages/profile.html' ,"_self"); 
     break;
     
     default:
@@ -113,4 +150,4 @@ const formatPrettyDate = (dateString, monthFormat = 'short') => {
 
 
 
-export {getJsonData , returningUsers , returningCampaigns , returningPledges ,checkValid , switching ,formatPrettyDate}
+export {returningUsers , returningCampaigns , returningPledges ,checkValid , switching ,formatPrettyDate ,addNewUser}

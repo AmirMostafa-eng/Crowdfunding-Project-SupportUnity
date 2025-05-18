@@ -19,24 +19,28 @@
                     <div id="signup-form">
                         <h2 class="auth-title">Join SupportUnity</h2>
                         <p class="auth-subtitle">Create an account to start backing or launching campaigns.</p>
-                        <form>
+                        <form id="signup-form">
                             <div class="mb-3">
                                 <label for="signup-name" class="form-label">Full Name</label>
                                 <input type="text" class="form-control" id="signup-name" placeholder="Enter your name" required>
+                                <span class="name-error">Please Enter a valid Name (at least 3 charcters)</span>
                             </div>
                             <div class="mb-3">
                                 <label for="signup-email" class="form-label">Email Address</label>
                                 <input type="email" class="form-control" id="signup-email" placeholder="Enter your email" required>
+                                <span class="name-error">Please Enter a valid Email </span>
                             </div>
                             <div class="mb-3">
                                 <label for="signup-password" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="signup-password" placeholder="Create a password" required>
+                                <span class="name-error">Please Enter a strong Password (8-20) chars</span>
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="agree-terms">
                                 <label class="form-check-label" for="agree-terms">I agree to the <a href="#" class="form-toggle">privacy policy</a></label>
                             </div>
-                            <button type="submit" class="btn btn-gradient w-100">Sign Up</button>
+                            <button type="submit" id="sign-up" class="btn btn-gradient w-100">Sign Up</button>
+                            <span class="name-error">This Email Already Exists</span>
                         </form>
                         <p class="mt-3 text-center">
                             Already have an account? <a href="./login.html" class="form-toggle" >Log In</a>

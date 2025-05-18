@@ -1,369 +1,593 @@
 {
   "users": [
-    { 
-      "id": 1, 
-      "name": "Amir Mostafa", 
-      "role": "admin", 
-      "isActive": true, 
-      "email": "amirmostafa@gmail.com", 
-      "password": "amir13579" 
+    {
+      "id": 1,
+      "name": "Amir Mostafa",
+      "role": "admin",
+      "isActive": true,
+      "email": "amirmostafa@gmail.com",
+      "password": "amir13579"
     },
-    { 
-      "id": 2, 
-      "name": "Abdelrahman Fawzy", 
-      "role": "admin", 
-      "isActive": true, 
-      "email": "abdelrahman222002@gmail.com", 
-      "password": "abdo222002" 
+    {
+      "id": 2,
+      "name": "Abdelrahman Fawzy",
+      "role": "admin",
+      "isActive": true,
+      "email": "abdelrahman222002@gmail.com",
+      "password": "abdo222002"
     },
-    { 
-      "id": 3, 
-      "name": "Maria Garcia", 
-      "role": "campaigner", 
-      "isActive": true, 
-      "email": "maria@example.com", 
-      "password": "maria97531" 
+    {
+      "id": 3,
+      "name": "Maria Garcia",
+      "role": "campaigner",
+      "isActive": true,
+      "email": "maria@example.com",
+      "password": "maria97531"
     },
-    { 
-      "id": 4, 
-      "name": "Sarah Johnson", 
-      "role": "campaigner", 
-      "isActive": true, 
-      "email": "sarah@example.com", 
-      "password": "admin12345" 
+    {
+      "id": 4,
+      "name": "Sarah Johnson",
+      "role": "campaigner",
+      "isActive": true,
+      "email": "sarah@example.com",
+      "password": "admin12345"
     },
-    { 
-      "id": 5, 
-      "name": "Olivia Brown", 
-      "role": "campaigner", 
-      "isActive": false, 
-      "email": "olivia@example.com", 
-      "password": "olivia23456" 
+    {
+      "id": 5,
+      "name": "Olivia Brown",
+      "role": "campaigner",
+      "isActive": false,
+      "email": "olivia@example.com",
+      "password": "olivia23456"
     },
-    { 
-      "id": 6, 
-      "name": "Michael Chen", 
-      "role": "campaigner", 
-      "isActive": true, 
-      "email": "michael@example.com", 
-      "password": "michael34567" 
+    {
+      "id": 6,
+      "name": "Michael Chen",
+      "role": "campaigner",
+      "isActive": true,
+      "email": "michael@example.com",
+      "password": "michael34567"
     },
-    { 
-      "id": 7, 
-      "name": "Emma Wilson", 
-      "role": "campaigner", 
-      "isActive": true, 
-      "email": "emma@example.com", 
-      "password": "emma56789" 
+    {
+      "id": 7,
+      "name": "Emma Wilson",
+      "role": "campaigner",
+      "isActive": true,
+      "email": "emma@example.com",
+      "password": "emma56789"
     },
-    { 
-      "id": 8, 
-      "name": "Robert Martinez", 
-      "role": "campaigner", 
-      "isActive": true, 
-      "email": "robert@example.com", 
-      "password": "robert78901" 
+    {
+      "id": 8,
+      "name": "Robert Martinez",
+      "role": "campaigner",
+      "isActive": true,
+      "email": "robert@example.com",
+      "password": "robert78901"
     },
-    { 
-      "id": 9, 
-      "name": "James Taylor", 
-      "role": "backer", 
-      "isActive": true, 
-      "email": "james@example.com", 
-      "password": "james45678" 
+    {
+      "id": 9,
+      "name": "James Taylor",
+      "role": "backer",
+      "isActive": true,
+      "email": "james@example.com",
+      "password": "james45678"
     },
-    { 
-      "id": 10, 
-      "name": "James Madison", 
-      "role": "backer", 
-      "isActive": true, 
-      "email": "jamesMadi@example.com", 
-      "password": "james45678" 
+    {
+      "id": 10,
+      "name": "James Madison",
+      "role": "backer",
+      "isActive": true,
+      "email": "jamesMadi@example.com",
+      "password": "james45678"
     },
-    { 
-      "id": 11, 
-      "name": "Jennifer Lopez", 
-      "role": "backer", 
-      "isActive": true, 
-      "email": "jennifer@example.com", 
-      "password": "jennifer12345" 
+    {
+      "id": 11,
+      "name": "Jennifer Lopez",
+      "role": "backer",
+      "isActive": true,
+      "email": "jennifer@example.com",
+      "password": "jennifer12345"
     },
-    { 
-      "id": 12, 
-      "name": "Daniel Kim", 
-      "role": "backer", 
-      "isActive": true, 
-      "email": "daniel@example.com", 
-      "password": "daniel67890" 
+    {
+      "id": 12,
+      "name": "Daniel Kim",
+      "role": "backer",
+      "isActive": true,
+      "email": "daniel@example.com",
+      "password": "daniel67890"
     },
-    { 
-      "id": 13, 
-      "name": "Sophia Patel", 
-      "role": "backer", 
-      "isActive": true, 
-      "email": "sophia@example.com", 
-      "password": "sophia24680" 
+    {
+      "id": 13,
+      "name": "Sophia Patel",
+      "role": "backer",
+      "isActive": true,
+      "email": "sophia@example.com",
+      "password": "sophia24680"
     },
-    { 
-      "id": 14, 
-      "name": "Thomas Wright", 
-      "role": "backer", 
-      "isActive": false, 
-      "email": "thomas@example.com", 
-      "password": "thomas13579" 
+    {
+      "id": 14,
+      "name": "Thomas Wright",
+      "role": "backer",
+      "isActive": false,
+      "email": "thomas@example.com",
+      "password": "thomas13579"
     },
-    { 
-      "id": 15, 
-      "name": "Hannah Clarke", 
-      "role": "backer", 
-      "isActive": true, 
-      "email": "hannah@example.com", 
-      "password": "hannah97531" 
+    {
+      "id": 15,
+      "name": "Hannah Clarke",
+      "role": "backer",
+      "isActive": true,
+      "email": "hannah@example.com",
+      "password": "hannah97531"
     },
-    { 
-      "id": 16, 
-      "name": "Alexandra Rodriguez", 
-      "role": "backer", 
-      "isActive": true, 
-      "email": "alexandra@example.com", 
-      "password": "alex24680" 
+    {
+      "id": 16,
+      "name": "Alexandra Rodriguez",
+      "role": "backer",
+      "isActive": true,
+      "email": "alexandra@example.com",
+      "password": "alex24680"
     },
-    { 
-      "id": 17, 
-      "name": "Marcus Johnson", 
-      "role": "backer", 
-      "isActive": true, 
-      "email": "marcus@example.com", 
-      "password": "marcus13579" 
+    {
+      "id": 17,
+      "name": "Marcus Johnson",
+      "role": "backer",
+      "isActive": true,
+      "email": "marcus@example.com",
+      "password": "marcus13579"
     },
-    { 
-      "id": 18, 
-      "name": "Priya Sharma", 
-      "role": "backer", 
-      "isActive": false, 
-      "email": "priya@example.com", 
-      "password": "priya86420" 
+    {
+      "id": 18,
+      "name": "Priya Sharma",
+      "role": "backer",
+      "isActive": false,
+      "email": "priya@example.com",
+      "password": "priya86420"
     },
-    { 
-      "id": 19, 
-      "name": "Lucas Nguyen", 
-      "role": "backer", 
-      "isActive": true, 
-      "email": "lucas@example.com", 
-      "password": "lucas97531" 
+    {
+      "id": 19,
+      "name": "Lucas Nguyen",
+      "role": "backer",
+      "isActive": true,
+      "email": "lucas@example.com",
+      "password": "lucas97531"
     },
-    { 
-      "id": 20, 
-      "name": "Elena Kowalski", 
-      "role": "backer", 
-      "isActive": true, 
-      "email": "elena@example.com", 
-      "password": "elena12345" 
+    {
+      "id": 20,
+      "name": "Elena Kowalski",
+      "role": "backer",
+      "isActive": true,
+      "email": "elena@example.com",
+      "password": "elena12345"
+    },
+    {
+      "id": 21,
+      "name": "amir mostafa mohamed",
+      "role": "backer",
+      "isActive": true,
+      "email": "amirmostafa119@gmail.com",
+      "password": "asdfgtyuioiuhyg"
+    },
+    {
+      "id": 22,
+      "name": "amir mostafa mohamed",
+      "role": "backer",
+      "isActive": true,
+      "email": "amirmostafa11@gmail.com",
+      "password": "rehshrtgdfiygjh"
+    },
+    {
+      "id": 23,
+      "name": "amir mostafa mohamed",
+      "role": "backer",
+      "isActive": true,
+      "email": "amirmostafa19@gmail.com",
+      "password": "efghsdfgkjh"
     }
-],
-"campaigns":[
-  {
-    "id": 1,
-    "title": "Solar-Powered Smart Watch",
-    "creatorId": 1,
-    "goal": 7500,
-    "deadline": "2025-12-15",
-    "isApproved": true,
-    "numOfBackers": "200",
-    "description": "An innovative solar-charging smartwatch with 30-day battery life, health monitoring, and satellite connectivity for adventurers.",
-    "currentAmount": 3200,
-    "category": "Technology",
-    "imageUrl": "https://m.media-amazon.com/images/I/71CkO0OjyEL.AC_UF1000,1000_QL80.jpg",
-    "location": "Cairo, Egypt",
-    "rewards": [
-      { "id": 1, "title": "Early Bird", "amount": 75, "description": "First 100 backers get 40% off retail price" },
-      { "id": 2, "title": "Standard Edition", "amount": 120, "description": "Full smartwatch with basic accessories" },
-      { "id": 3, "title": "Explorer Pack", "amount": 180, "description": "Watch + solar charging pad + adventure case" },
-      { "id": 4, "title": "VIP Bundle", "amount": 300, "description": "Limited edition watch with custom engraving & premium support" }
-    ]
-  },
-  {
-    "id": 2,
-    "title": "Eco-Friendly Bamboo Bicycle",
-    "creatorId": 2,
-    "goal": 15000,
-    "deadline": "2025-11-30",
-    "isApproved": true,
-    "numOfBackers": "450",
-    "description": "A lightweight, durable bicycle made from sustainable bamboo, reducing carbon footprint without compromising performance.",
-    "currentAmount": 9800,
-    "category": "Eco-Friendly",
-    "imageUrl": "https://m.media-amazon.com/images/I/61WZEjUAnoL.AC_UF894,1000_QL80_FMwebp.jpg",
-    "location": "Bali, Indonesia",
-    "rewards": [
-      { "id": 1, "title": "Supporter", "amount": 50, "description": "Personalized thank-you note & eco-friendly water bottle" },
-      { "id": 2, "title": "Bike Kit", "amount": 350, "description": "DIY bamboo bike assembly kit with tools" },
-      { "id": 3, "title": "Pre-Assembled", "amount": 700, "description": "Fully built bamboo bicycle with warranty" },
-      { "id": 4, "title": "Deluxe Edition", "amount": 1200, "description": "Custom paint job + premium accessories" }
-    ]
-  },
-  {
-    "id": 3,
-    "title": "AI-Powered Home Gardening System",
-    "creatorId": 3,
-    "goal": 20000,
-    "deadline": "2026-01-20",
-    "isApproved": true,
-    "numOfBackers": "320",
-    "description": "A smart indoor garden that uses AI to optimize plant growth, ensuring fresh herbs and veggies year-round with minimal effort.",
-    "currentAmount": 12500,
-    "category": "Gardening",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy494a7OoYYFZ7Q_AZC_Sj3ruY1bMvt0kFDQuL88fkuCBiRLO4qswAQos&s=10 ",
-    "location": "San Francisco, USA",
-    "rewards": [
-      { "id": 1, "title": "Seed Pack", "amount": 30, "description": "Starter seed kit + digital guide" },
-      { "id": 2, "title": "Basic Garden", "amount": 250, "description": "Compact AI garden unit" },
-      { "id": 3, "title": "Pro Gardener", "amount": 500, "description": "Larger system with 10 plant pods" },
-      { "id": 4, "title": "Farm Bundle", "amount": 1000, "description": "Commercial-grade system for small farms" }
-    ]
-  },
-  {
-    "id": 4,
-    "title": "Portable Espresso Maker for Travelers",
-    "creatorId": 4,
-    "goal": 10000,
-    "deadline": "2025-10-10",
-    "isApproved": true,
-    "numOfBackers": "600",
-    "description": "A compact, battery-operated espresso machine that delivers barista-quality coffee anywhere—perfect for camping, offices, and road trips.",
-    "currentAmount": 7800,
-    "category": "Food & Beverage",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLUIViyoNbV6M4hW9rAHeBXdxi4MgrAmBzr6rE2Er1uLS4Fo_iy-QlmNa7&s=10 ",
-    "location": "Milan, Italy",
-    "rewards": [
-      { "id": 1, "title": "Coffee Lover", "amount": 40, "description": "Exclusive blend coffee samples" },
-      { "id": 2, "title": "Basic Machine", "amount": 120, "description": "Portable espresso maker" },
-      { "id": 3, "title": "Travel Kit", "amount": 180, "description": "Maker + carrying case + filters" },
-      { "id": 4, "title": "Deluxe Set", "amount": 250, "description": "Machine + premium beans + frother" }
-    ]
-  },
-  {
-    "id": 5,
-    "title": "Self-Cleaning Water Bottle with UV Purification",
-    "creatorId": 5,
-    "goal": 12000,
-    "deadline": "2025-09-25",
-    "isApproved": true,
-    "numOfBackers": "800",
-    "description": "A revolutionary water bottle that uses UV-C light to kill 99.9% of bacteria, keeping your water clean and fresh for days.",
-    "currentAmount": 9500,
-    "category": "Health & Wellness",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcrStaMhceB3wQAgj2edTUnLENj6ATth3OLW3_6iV2XVDLnTvhpxExYVw&s=10 ",
-    "location": "Tokyo, Japan",
-    "rewards": [
-      { "id": 1, "title": "Early Supporter", "amount": 25, "description": "Discount code + sticker pack" },
-      { "id": 2, "title": "Single Bottle", "amount": 60, "description": "One self-cleaning UV bottle" },
-      { "id": 3, "title": "Family Pack", "amount": 150, "description": "Three bottles in different colors" },
-      { "id": 4, "title": "Ultimate Bundle", "amount": 200, "description": "Bottle + portable charger + filter set" }
-    ]
-  },
-  {
-    "id": 6,
-    "title": "Modular Smart Backpack with Anti-Theft Tech",
-    "creatorId": 6,
-    "goal": 18000,
-    "deadline": "2026-02-05",
-    "isApproved": true,
-    "numOfBackers": "520",
-    "description": "A customizable backpack with RFID protection, GPS tracking, USB charging, and detachable compartments for work, travel, or gym use.",
-    "currentAmount": 11000,
-    "category": "Travel",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlZsOmL5B3qPqMVL_Fq3Io7WEaeB0F67f7JaBc9Xv63rL2yfaRaNrIKW6G&s=10 ",
-    "location": "Berlin, Germany",
-    "rewards": [
-      { "id": 1, "title": "Early Access", "amount": 80, "description": "Backpack at 30% off retail price" },
-      { "id": 2, "title": "Standard Pack", "amount": 150, "description": "One modular backpack" },
-      { "id": 3, "title": "Travel Pro", "amount": 220, "description": "Backpack + extra modules" },
-      { "id": 4, "title": "Ultimate Security", "amount": 350, "description": "Backpack + 2-year theft protection plan" }
-    ]
-  },
-  {
-    "id": 7,
-    "title": "Reusable Silicone Food Wraps",
-    "creatorId": 7,
-    "goal": 8000,
-    "deadline": "2025-08-15",
-    "isApproved": true,
-    "numOfBackers": "1200",
-    "description": "Eco-friendly, washable silicone wraps to replace plastic cling film—keeps food fresh while reducing waste.",
-    "currentAmount": 6500,
-    "category": "Eco-Friendly",
-    "imageUrl": "https://m.media-amazon.com/images/I/71ZDHzyud2L.AC_UF894,1000_QL80_FMwebp.jpg",
-    "location": "Vancouver, Canada",
-    "rewards": [
-      { "id": 1, "title": "Starter Set", "amount": 20, "description": "3 small wraps" },
-      { "id": 2, "title": "Family Pack", "amount": 35, "description": "6 assorted-sized wraps" },
-      { "id": 3, "title": "Zero-Waste Bundle", "amount": 50, "description": "Wraps + storage bags + guidebook" },
-      { "id": 4, "title": "Bulk Order", "amount": 150, "description": "30 wraps for businesses" }
-    ]
-  },
-  {
-    "id": 8,
-    "title": "Foldable Electric Scooter",
-    "creatorId": 8,
-    "goal": 25000,
-    "deadline": "2026-03-10",
-    "isApproved": true,
-    "numOfBackers": "700",
-    "description": "Ultra-portable e-scooter with 30-mile range, fast charging, and app connectivity for urban commuters.",
-    "currentAmount": 18500,
-    "category": "Transportation",
-    "imageUrl": "https://m.media-amazon.com/images/I/61MknGGT5fL.AC_UF1000,1000_QL80_FMwebp.jpg",
-    "location": "Seoul, South Korea",
-    "rewards": [
-      { "id": 1, "title": "Early Bird", "amount": 400, "description": "Scooter at 25% discount" },
-      { "id": 2, "title": "Standard Scooter", "amount": 600, "description": "One foldable e-scooter" },
-      { "id": 3, "title": "Commuter Pack", "amount": 750, "description": "Scooter + helmet + lock" },
-      { "id": 4, "title": "VIP Edition", "amount": 1000, "description": "Limited color + extended warranty" }
-    ]
-  },
-  {
-    "id": 9,
-    "title": "Smart Posture Corrector Wearable",
-    "creatorId": 9,
-    "goal": 15000,
-    "deadline": "2025-11-01",
-    "isApproved": true,
-    "numOfBackers": "380",
-    "description": "A sleek wearable device that vibrates when you slouch, helping improve posture and reduce back pain.",
-    "currentAmount": 9200,
-    "category": "Health & Wellness",
-    "imageUrl": "https://m.media-amazon.com/images/I/91-2R9mD-ZL._AC_UL480_FMwebp_QL65_.jpg",
-    "location": "London, UK",
-    "rewards": [
-      { "id": 1, "title": "Basic Device", "amount": 70, "description": "Single posture corrector" },
-      { "id": 2, "title": "Pro Pack", "amount": 120, "description": "Device + app analytics" },
-      { "id": 3, "title": "Family Bundle", "amount": 200, "description": "Three devices + coaching sessions" },
-      { "id": 4, "title": "Corporate Pack", "amount": 500, "description": "10 devices for offices" }
-    ]
-  },
-  {
-    "id": 10,
-    "title": "Handheld Retro Gaming Console",
-    "creatorId": 10,
-    "goal": 12000,
-    "deadline": "2025-12-01",
-    "isApproved": false,
-    "numOfBackers": "950",
-    "description": "A pocket-sized console with 500+ classic games, HDMI output, and rechargeable battery for nostalgic gamers.",
-    "currentAmount": 10500,
-    "category": "Gaming",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlkkPn2tTOfneAQt0_W2xW2wjQzVWSzqw4iZM7naO_zsiqyHuRRKO14wA&s=10 ",
-    "location": "Austin, USA",
-    "rewards": [
-      { "id": 1, "title": "Game Fan", "amount": 50, "description": "Console at early-bird price" },
-      { "id": 2, "title": "Deluxe Edition", "amount": 80, "description": "Console + carrying case" },
-      { "id": 3, "title": "Ultimate Gamer", "amount": 120, "description": "Console + extra controllers" },
-      { "id": 4, "title": "Collector's Pack", "amount": 200, "description": "Limited-edition color + signed artwork" }
-    ]
-  }
-],
-"pledges": [
+  ],
+  "campaigns": [
+    {
+      "id": 1,
+      "title": "Solar-Powered Smart Watch",
+      "creatorId": 1,
+      "goal": 7500,
+      "deadline": "2025-12-15",
+      "isApproved": true,
+      "numOfBackers": "200",
+      "description": "An innovative solar-charging smartwatch with 30-day battery life, health monitoring, and satellite connectivity for adventurers.",
+      "currentAmount": 3200,
+      "category": "Technology",
+      "imageUrl": "https://m.media-amazon.com/images/I/71CkO0OjyEL.AC_UF1000,1000_QL80.jpg",
+      "location": "Cairo, Egypt",
+      "rewards": [
+        {
+          "id": 1,
+          "title": "Early Bird",
+          "amount": 75,
+          "description": "First 100 backers get 40% off retail price"
+        },
+        {
+          "id": 2,
+          "title": "Standard Edition",
+          "amount": 120,
+          "description": "Full smartwatch with basic accessories"
+        },
+        {
+          "id": 3,
+          "title": "Explorer Pack",
+          "amount": 180,
+          "description": "Watch + solar charging pad + adventure case"
+        },
+        {
+          "id": 4,
+          "title": "VIP Bundle",
+          "amount": 300,
+          "description": "Limited edition watch with custom engraving & premium support"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Eco-Friendly Bamboo Bicycle",
+      "creatorId": 2,
+      "goal": 15000,
+      "deadline": "2025-11-30",
+      "isApproved": true,
+      "numOfBackers": "450",
+      "description": "A lightweight, durable bicycle made from sustainable bamboo, reducing carbon footprint without compromising performance.",
+      "currentAmount": 9800,
+      "category": "Eco-Friendly",
+      "imageUrl": "https://m.media-amazon.com/images/I/61WZEjUAnoL.AC_UF894,1000_QL80_FMwebp.jpg",
+      "location": "Bali, Indonesia",
+      "rewards": [
+        {
+          "id": 1,
+          "title": "Supporter",
+          "amount": 50,
+          "description": "Personalized thank-you note & eco-friendly water bottle"
+        },
+        {
+          "id": 2,
+          "title": "Bike Kit",
+          "amount": 350,
+          "description": "DIY bamboo bike assembly kit with tools"
+        },
+        {
+          "id": 3,
+          "title": "Pre-Assembled",
+          "amount": 700,
+          "description": "Fully built bamboo bicycle with warranty"
+        },
+        {
+          "id": 4,
+          "title": "Deluxe Edition",
+          "amount": 1200,
+          "description": "Custom paint job + premium accessories"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "AI-Powered Home Gardening System",
+      "creatorId": 3,
+      "goal": 20000,
+      "deadline": "2026-01-20",
+      "isApproved": true,
+      "numOfBackers": "320",
+      "description": "A smart indoor garden that uses AI to optimize plant growth, ensuring fresh herbs and veggies year-round with minimal effort.",
+      "currentAmount": 12500,
+      "category": "Gardening",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy494a7OoYYFZ7Q_AZC_Sj3ruY1bMvt0kFDQuL88fkuCBiRLO4qswAQos&s=10 ",
+      "location": "San Francisco, USA",
+      "rewards": [
+        {
+          "id": 1,
+          "title": "Seed Pack",
+          "amount": 30,
+          "description": "Starter seed kit + digital guide"
+        },
+        {
+          "id": 2,
+          "title": "Basic Garden",
+          "amount": 250,
+          "description": "Compact AI garden unit"
+        },
+        {
+          "id": 3,
+          "title": "Pro Gardener",
+          "amount": 500,
+          "description": "Larger system with 10 plant pods"
+        },
+        {
+          "id": 4,
+          "title": "Farm Bundle",
+          "amount": 1000,
+          "description": "Commercial-grade system for small farms"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Portable Espresso Maker for Travelers",
+      "creatorId": 4,
+      "goal": 10000,
+      "deadline": "2025-10-10",
+      "isApproved": true,
+      "numOfBackers": "600",
+      "description": "A compact, battery-operated espresso machine that delivers barista-quality coffee anywhere—perfect for camping, offices, and road trips.",
+      "currentAmount": 7800,
+      "category": "Food & Beverage",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLUIViyoNbV6M4hW9rAHeBXdxi4MgrAmBzr6rE2Er1uLS4Fo_iy-QlmNa7&s=10 ",
+      "location": "Milan, Italy",
+      "rewards": [
+        {
+          "id": 1,
+          "title": "Coffee Lover",
+          "amount": 40,
+          "description": "Exclusive blend coffee samples"
+        },
+        {
+          "id": 2,
+          "title": "Basic Machine",
+          "amount": 120,
+          "description": "Portable espresso maker"
+        },
+        {
+          "id": 3,
+          "title": "Travel Kit",
+          "amount": 180,
+          "description": "Maker + carrying case + filters"
+        },
+        {
+          "id": 4,
+          "title": "Deluxe Set",
+          "amount": 250,
+          "description": "Machine + premium beans + frother"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Self-Cleaning Water Bottle with UV Purification",
+      "creatorId": 5,
+      "goal": 12000,
+      "deadline": "2025-09-25",
+      "isApproved": true,
+      "numOfBackers": "800",
+      "description": "A revolutionary water bottle that uses UV-C light to kill 99.9% of bacteria, keeping your water clean and fresh for days.",
+      "currentAmount": 9500,
+      "category": "Health & Wellness",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcrStaMhceB3wQAgj2edTUnLENj6ATth3OLW3_6iV2XVDLnTvhpxExYVw&s=10 ",
+      "location": "Tokyo, Japan",
+      "rewards": [
+        {
+          "id": 1,
+          "title": "Early Supporter",
+          "amount": 25,
+          "description": "Discount code + sticker pack"
+        },
+        {
+          "id": 2,
+          "title": "Single Bottle",
+          "amount": 60,
+          "description": "One self-cleaning UV bottle"
+        },
+        {
+          "id": 3,
+          "title": "Family Pack",
+          "amount": 150,
+          "description": "Three bottles in different colors"
+        },
+        {
+          "id": 4,
+          "title": "Ultimate Bundle",
+          "amount": 200,
+          "description": "Bottle + portable charger + filter set"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Modular Smart Backpack with Anti-Theft Tech",
+      "creatorId": 6,
+      "goal": 18000,
+      "deadline": "2026-02-05",
+      "isApproved": true,
+      "numOfBackers": "520",
+      "description": "A customizable backpack with RFID protection, GPS tracking, USB charging, and detachable compartments for work, travel, or gym use.",
+      "currentAmount": 11000,
+      "category": "Travel",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlZsOmL5B3qPqMVL_Fq3Io7WEaeB0F67f7JaBc9Xv63rL2yfaRaNrIKW6G&s=10 ",
+      "location": "Berlin, Germany",
+      "rewards": [
+        {
+          "id": 1,
+          "title": "Early Access",
+          "amount": 80,
+          "description": "Backpack at 30% off retail price"
+        },
+        {
+          "id": 2,
+          "title": "Standard Pack",
+          "amount": 150,
+          "description": "One modular backpack"
+        },
+        {
+          "id": 3,
+          "title": "Travel Pro",
+          "amount": 220,
+          "description": "Backpack + extra modules"
+        },
+        {
+          "id": 4,
+          "title": "Ultimate Security",
+          "amount": 350,
+          "description": "Backpack + 2-year theft protection plan"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Reusable Silicone Food Wraps",
+      "creatorId": 7,
+      "goal": 8000,
+      "deadline": "2025-08-15",
+      "isApproved": true,
+      "numOfBackers": "1200",
+      "description": "Eco-friendly, washable silicone wraps to replace plastic cling film—keeps food fresh while reducing waste.",
+      "currentAmount": 6500,
+      "category": "Eco-Friendly",
+      "imageUrl": "https://m.media-amazon.com/images/I/71ZDHzyud2L.AC_UF894,1000_QL80_FMwebp.jpg",
+      "location": "Vancouver, Canada",
+      "rewards": [
+        {
+          "id": 1,
+          "title": "Starter Set",
+          "amount": 20,
+          "description": "3 small wraps"
+        },
+        {
+          "id": 2,
+          "title": "Family Pack",
+          "amount": 35,
+          "description": "6 assorted-sized wraps"
+        },
+        {
+          "id": 3,
+          "title": "Zero-Waste Bundle",
+          "amount": 50,
+          "description": "Wraps + storage bags + guidebook"
+        },
+        {
+          "id": 4,
+          "title": "Bulk Order",
+          "amount": 150,
+          "description": "30 wraps for businesses"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Foldable Electric Scooter",
+      "creatorId": 8,
+      "goal": 25000,
+      "deadline": "2026-03-10",
+      "isApproved": true,
+      "numOfBackers": "700",
+      "description": "Ultra-portable e-scooter with 30-mile range, fast charging, and app connectivity for urban commuters.",
+      "currentAmount": 18500,
+      "category": "Transportation",
+      "imageUrl": "https://m.media-amazon.com/images/I/61MknGGT5fL.AC_UF1000,1000_QL80_FMwebp.jpg",
+      "location": "Seoul, South Korea",
+      "rewards": [
+        {
+          "id": 1,
+          "title": "Early Bird",
+          "amount": 400,
+          "description": "Scooter at 25% discount"
+        },
+        {
+          "id": 2,
+          "title": "Standard Scooter",
+          "amount": 600,
+          "description": "One foldable e-scooter"
+        },
+        {
+          "id": 3,
+          "title": "Commuter Pack",
+          "amount": 750,
+          "description": "Scooter + helmet + lock"
+        },
+        {
+          "id": 4,
+          "title": "VIP Edition",
+          "amount": 1000,
+          "description": "Limited color + extended warranty"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Smart Posture Corrector Wearable",
+      "creatorId": 9,
+      "goal": 15000,
+      "deadline": "2025-11-01",
+      "isApproved": true,
+      "numOfBackers": "380",
+      "description": "A sleek wearable device that vibrates when you slouch, helping improve posture and reduce back pain.",
+      "currentAmount": 9200,
+      "category": "Health & Wellness",
+      "imageUrl": "https://m.media-amazon.com/images/I/91-2R9mD-ZL._AC_UL480_FMwebp_QL65_.jpg",
+      "location": "London, UK",
+      "rewards": [
+        {
+          "id": 1,
+          "title": "Basic Device",
+          "amount": 70,
+          "description": "Single posture corrector"
+        },
+        {
+          "id": 2,
+          "title": "Pro Pack",
+          "amount": 120,
+          "description": "Device + app analytics"
+        },
+        {
+          "id": 3,
+          "title": "Family Bundle",
+          "amount": 200,
+          "description": "Three devices + coaching sessions"
+        },
+        {
+          "id": 4,
+          "title": "Corporate Pack",
+          "amount": 500,
+          "description": "10 devices for offices"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Handheld Retro Gaming Console",
+      "creatorId": 10,
+      "goal": 12000,
+      "deadline": "2025-12-01",
+      "isApproved": false,
+      "numOfBackers": "950",
+      "description": "A pocket-sized console with 500+ classic games, HDMI output, and rechargeable battery for nostalgic gamers.",
+      "currentAmount": 10500,
+      "category": "Gaming",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlkkPn2tTOfneAQt0_W2xW2wjQzVWSzqw4iZM7naO_zsiqyHuRRKO14wA&s=10 ",
+      "location": "Austin, USA",
+      "rewards": [
+        {
+          "id": 1,
+          "title": "Game Fan",
+          "amount": 50,
+          "description": "Console at early-bird price"
+        },
+        {
+          "id": 2,
+          "title": "Deluxe Edition",
+          "amount": 80,
+          "description": "Console + carrying case"
+        },
+        {
+          "id": 3,
+          "title": "Ultimate Gamer",
+          "amount": 120,
+          "description": "Console + extra controllers"
+        },
+        {
+          "id": 4,
+          "title": "Collector's Pack",
+          "amount": 200,
+          "description": "Limited-edition color + signed artwork"
+        }
+      ]
+    }
+  ],
+  "pledges": [
     {
       "id": 1,
       "campaignId": 1,
@@ -524,5 +748,5 @@
       "rewardId": 4,
       "date": "2025-09-24"
     }
-]
+  ]
 }

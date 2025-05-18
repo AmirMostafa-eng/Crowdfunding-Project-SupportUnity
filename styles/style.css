@@ -1,7 +1,8 @@
 :root {
   --primary: #6c5ce7;
   --primary-dark: #5649c0;
-  --gradient: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+  /* --gradient: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); */
+  --gradient: linear-gradient(#6c5ce7);
   --text-dark: #2d3436;
   --text-light: #636e72;
   --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);

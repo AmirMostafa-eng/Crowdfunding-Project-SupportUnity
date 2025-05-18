@@ -1,13 +1,16 @@
-import { checkValid, returningUsers, switching } from "./utils.js";
+// import { json } from "body-parser";
+import { checkValid, returningUsers, switching , addNewUser } from "./utils.js";
 
-export let newUser = JSON.parse(sessionStorage.getItem("currentUser")) || {};
-if (newUser) {
-  switching(newUser.role);
+let currentUser = JSON.parse(sessionStorage.getItem("currentUser")) || {};
+if (currentUser) {
+  switching(currentUser.role);
 }
+// console.log(currentUser)
 
-let namePattern = /^[A-Za-z]{3,}$/;
+// let namePattern = /^[A-Za-z]{3,}$/;
+let namePattern = /^[A-Za-z]{2,}(?:[ '-][A-Za-z]{2,})*$/;
 let emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/ ;
-let passPattern = /^[A-Za-z0-9]{6,20}$/ ;
+let passPattern = /^[A-Za-z0-9]{8,20}$/ ;
 
 
 let signUpBtn = document.getElementById("sign-up");
@@ -33,17 +36,53 @@ signUpPass.addEventListener("blur",function (event) {
 
 
 // console.log(signUpBtn);
-signUpBtn.addEventListener("click", async function (event) {
-  event.preventDefault();
-  if (checkValid(signUpName , namePattern) && checkValid(signUpEmail , emailPattern) && checkValid(signUpPass , passPattern)){
-    let users = await returningUsers();
-    if (users.filter((user) => user.email == signUpEmail.value).length) {
-      signUpBtn.nextElementSibling.style.color ='red';
-      signUpBtn.nextElementSibling.style.display = 'block';
-    }else{
-      window.open('../pages/campaigns.html' ,"_self");
+// signUpBtn.addEventListener("click", async function (event) {
+//   event.preventDefault();
+//   if (checkValid(signUpName , namePattern) && checkValid(signUpEmail , emailPattern) && checkValid(signUpPass , passPattern)){
+//     let users = await returningUsers();
+//     if (users.filter((user) => user.email == signUpEmail.value).length) {
+//       signUpBtn.nextElementSibling.style.color ='red';
+//       signUpBtn.nextElementSibling.style.display = 'block';
+//     }else{
+//       addNewUser(signUpName.value ,signUpEmail.value , signUpPass.value);
+//       window.open('../pages/campaigns.html' ,"_self");
+//       // console.log(currentUser);
+//       // sessionStorage.setItem("currentUser",JSON.stringify(currentUser));
+//     }
+//   }
+// })
+
+const signupForm = document.querySelector("form#signup-form");
+console.log(signupForm);
+if (signupForm) {
+  signupForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    if (
+      checkValid(signUpName, namePattern) &&
+      checkValid(signUpEmail, emailPattern) &&
+      checkValid(signUpPass, passPattern)
+    ) {
+      let users = await returningUsers();
+      if (users.filter((user) => user.email == signUpEmail.value).length) {
+        signUpBtn.nextElementSibling.style.color = "red";
+        signUpBtn.nextElementSibling.style.display = "block";
+      } else {
+        currentUser = await addNewUser(
+          signUpName.value,
+          signUpEmail.value,
+          signUpPass.value
+        );
+        sessionStorage.setItem("currentUser" , JSON.stringify(currentUser));
+        // window.open("../pages/campaigns.html", "_self");
+      }
     }
-  }
-})
+    return false;
+  });
+}
+
+
+
+
 
 
