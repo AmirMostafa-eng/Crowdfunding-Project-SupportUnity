@@ -229,3 +229,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('category-filter').addEventListener('change', filterAndSortCampaigns);
     document.getElementById('sort-filter').addEventListener('change', filterAndSortCampaigns);
 });
+
+
+const currentUser = JSON.parse(sessionStorage.getItem("currentUser")) || {};
+const navName = document.querySelector(".nav-name");
+
+if (currentUser) {
+  navName.textContent = currentUser.name;
+}

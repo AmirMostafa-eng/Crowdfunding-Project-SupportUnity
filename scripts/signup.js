@@ -35,23 +35,6 @@ signUpPass.addEventListener("blur",function (event) {
 })
 
 
-// console.log(signUpBtn);
-// signUpBtn.addEventListener("click", async function (event) {
-//   event.preventDefault();
-//   if (checkValid(signUpName , namePattern) && checkValid(signUpEmail , emailPattern) && checkValid(signUpPass , passPattern)){
-//     let users = await returningUsers();
-//     if (users.filter((user) => user.email == signUpEmail.value).length) {
-//       signUpBtn.nextElementSibling.style.color ='red';
-//       signUpBtn.nextElementSibling.style.display = 'block';
-//     }else{
-//       addNewUser(signUpName.value ,signUpEmail.value , signUpPass.value);
-//       window.open('../pages/campaigns.html' ,"_self");
-//       // console.log(currentUser);
-//       // sessionStorage.setItem("currentUser",JSON.stringify(currentUser));
-//     }
-//   }
-// })
-
 const signupForm = document.querySelector("form#signup-form");
 console.log(signupForm);
 if (signupForm) {
@@ -86,3 +69,20 @@ if (signupForm) {
 
 
 
+
+// console.log(signUpBtn);
+// signUpBtn.addEventListener("click", async function (event) {
+//   event.preventDefault();
+//   if (checkValid(signUpName , namePattern) && checkValid(signUpEmail , emailPattern) && checkValid(signUpPass , passPattern)){
+//     let users = await returningUsers();
+//     if (users.filter((user) => user.email == signUpEmail.value).length) {
+//       signUpBtn.nextElementSibling.style.color ='red';
+//       signUpBtn.nextElementSibling.style.display = 'block';
+//     }else{
+//       addNewUser(signUpName.value ,signUpEmail.value , signUpPass.value);
+//       window.open('../pages/campaigns.html' ,"_self");
+//       // console.log(currentUser);
+//       // sessionStorage.setItem("currentUser",JSON.stringify(currentUser));
+//     }
+//   }
+// })

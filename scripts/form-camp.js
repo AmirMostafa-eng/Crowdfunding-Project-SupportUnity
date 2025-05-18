@@ -86,3 +86,15 @@
         // In a real app, you would send data to your backend here
     });
 // });
+// =============================
+
+const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+console.log(currentUser.role)
+const campaignerSection = document.querySelector("section.campaigner");
+const backerSection = document.querySelector("section.backer");
+
+(currentUser.role === 'backer') ?
+campaignerSection.style.display = 'none':
+backerSection.style.display ='none';
+
+

@@ -47,13 +47,23 @@
                 </ul>
                 
                 <!-- Auth Buttons -->
-                <div class="d-flex ms-lg-3 gap-2">
+                <div class="d-flex ms-lg-3 gap-2" id="anon">
                     <a href="./pages/login.html" class="btn btn-login btn-auth me-lg-2">
                         <i class="fas fa-sign-in-alt me-2"></i>Login
                     </a>
                     <a href="./pages/signup.html" class="btn btn-signup btn-auth">
                         <i class="fas fa-user-plus me-2"></i>Sign Up
                     </a>
+                </div>
+
+                <div class="dropdown ms-lg-3 logged">
+                    <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="d-none d-lg-inline nav-name">John Doe</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+                        <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user me-2"></i> Profile</a></li>
+                        <li><a class="dropdown-item" id="sign-out" href="#"><i class="fas fa-sign-out-alt me-2"></i> Sign Out</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
