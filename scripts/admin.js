@@ -40,3 +40,171 @@
         // }
         // return gk_fileData[filename] || "";
         // }
+// Sidebar toggle for mobile
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const mainContent = document.getElementById('mainContent');
+        // const url = 'http://localhost:3000';
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+            mainContent.classList.toggle('full-width');
+        });
+
+        // Section navigation
+        const navLinks = document.querySelectorAll('.sidebar-nav a');
+        const sections = document.querySelectorAll('.dashboard-section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                
+                // Update active link
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                // Show/hide sections
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === targetId) {
+                        section.classList.add('active');
+                    }
+                });
+
+                // Close sidebar on mobile after clicking
+                if (window.innerWidth <= 991.98) {
+                    sidebar.classList.remove('collapsed');
+                    mainContent.classList.add('full-width');
+                }
+            });
+        });
+
+        // Fetch data functions
+        async function fetchData(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return await response.json();
+            } catch (error) {
+                console.error(`Error fetching ${url}:`, error);
+                return [];
+            }
+        }
+
+        async function populateUsers() {
+            const users = await fetchData('http://localhost:3000/users');
+            const usersTable = document.getElementById('usersTable');
+            const allUsersTable = document.getElementById('allUsersTable');
+            usersTable.innerHTML = '';
+            allUsersTable.innerHTML = '';
+
+            users.forEach(user => {
+                const row = `
+                    <tr>
+                        <td>${user.username}</td>
+                        <td>${user.email}</td>
+                        <td>${user.role}</td>
+                        <td>${user.status}</td>
+                        ${user.role === 'Pending Campaigner' ? `
+                            <td>
+                                <button class="btn btn-action btn-approve me-2" onclick="confirmAction('Approve Campaigner role for ${user.username}?')">Approve</button>
+                                <button class="btn btn-action btn-reject me-2" onclick="confirmAction('Reject Campaigner role for ${user.username}?')">Reject</button>
+                                <button class="btn btn-action btn-ban" onclick="confirmAction('Ban ${user.username}?')">Ban</button>
+                            </td>
+                        ` : `
+                            <td>
+                                <button class="btn btn-action btn-ban" onclick="confirmAction('Ban ${user.username}?')">Ban</button>
+                            </td>
+                        `}
+                    </tr>
+                `;
+                usersTable.innerHTML += row;
+                allUsersTable.innerHTML += `
+                    <tr>
+                        <td>${user.username}</td>
+                        <td>${user.email}</td>
+                        <td>${user.role}</td>
+                        <td>${user.status}</td>
+                    </tr>
+                `;
+            });
+        }
+
+        async function populateCampaigns() {
+            const campaigns = await fetchData('http://localhost:3000/campaigns');
+            const campaignsTable = document.getElementById('campaignsTable');
+            const allCampaignsTable = document.getElementById('allCampaignsTable');
+            campaignsTable.innerHTML = '';
+            allCampaignsTable.innerHTML = '';
+
+            campaigns.forEach(campaign => {
+                const row = `
+                    <tr>
+                        <td>${campaign.title}</td>
+                        <td>${campaign.creator}</td>
+                        <td>$${campaign.fundingGoal}</td>
+                        <td>${campaign.status}</td>
+                        ${campaign.status === 'Pending' ? `
+                            <td>
+                                <button class="btn btn-action btn-approve me-2" onclick="confirmAction('Approve ${campaign.title}?')">Approve</button>
+                                <button class="btn btn-action btn-reject me-2" onclick="confirmAction('Reject ${campaign.title}?')">Reject</button>
+                                <button class="btn btn-action btn-delete" onclick="confirmAction('Delete ${campaign.title}?')">Delete</button>
+                            </td>
+                        ` : `
+                            <td>
+                                <button class="btn btn-action btn-delete" onclick="confirmAction('Delete ${campaign.title}?')">Delete</button>
+                            </td>
+                        `}
+                    </tr>
+                `;
+                campaignsTable.innerHTML += row;
+                allCampaignsTable.innerHTML += `
+                    <tr>
+                        <td>${campaign.title}</td>
+                        <td>${campaign.creator}</td>
+                        <td>$${campaign.fundingGoal}</td>
+                        <td>$${campaign.raised}</td>
+                        <td>${campaign.status}</td>
+                    </tr>
+                `;
+            });
+        }
+
+        async function populatePledges() {
+            const pledges = await fetchData('http://localhost:3000/pledges');
+            const pledgesTable = document.getElementById('pledgesTable');
+            pledgesTable.innerHTML = '';
+
+            pledges.forEach(pledge => {
+                pledgesTable.innerHTML += `
+                    <tr>
+                        <td>${pledge.backer}</td>
+                        <td>${pledge.campaign}</td>
+                        <td>$${pledge.amount}</td>
+                        <td>${pledge.date}</td>
+                    </tr>
+                `;
+            });
+        }
+
+        // Confirmation function (placeholder)
+        function confirmAction(message) {
+            if (confirm(message)) {
+                alert('Action confirmed!');
+                // Implement actual action logic here
+            }
+        }
+
+        // Initialize data
+        async function init() {
+            await Promise.all([
+                populateUsers(),
+                populateCampaigns(),
+                populatePledges()
+            ]);
+        }
+
+        init();

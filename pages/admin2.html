@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderation - SupportUnity</title>
+    <link rel="shortcut icon" href="../asstes/supportUnity_Logo_with_Sky_Blue_and_Deep_Navy-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <style>
+        .admin-dashboard {
+            min-height: 100vh;
+            display: flex;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: white;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar.collapsed {
+            transform: translateX(-250px);
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-header img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .sidebar-header h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar-nav li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-nav a {
+            display: block;
+            padding: 10px 15px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-nav a:hover, .sidebar-nav a.active {
+            background: rgba(108, 92, 231, 0.08);
+            color: var(--primary);
+        }
+
+        .sidebar-nav a.active::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background: var(--primary);
+            margin-top: 5px;
+        }
+
+        .sidebar-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1100;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 40px 20px;
+            margin-left: 250px;
+            transition: margin-left 0.3s ease;
+        }
+
+        .main-content.full-width {
+            margin-left: 0;
+        }
+
+        .dashboard-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .dashboard-section.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .dashboard-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .dashboard-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .table-responsive {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+            padding: 10px;
+        }
+
+        .btn-action {
+            padding: 5px 10px;
+            font-size: 0.85rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-approve {
+            background: var(--gradient);
+            color: white;
+            border: none;
+        }
+
+        .btn-reject, .btn-delete {
+            background: #e74c3c;
+            color: white;
+            border: none;
+        }
+
+        .btn-ban {
+            background: #f39c12;
+            color: white;
+            border: none;
+        }
+
+        @media (max-width: 991.98px) {
+            .sidebar {
+                transform: translateX(-250px);
+            }
+
+            .sidebar.collapsed {
+                transform: translateX(0);
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .main-content.full-width {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .dashboard-title {
+                font-size: 1.8rem;
+            }
+
+            .table {
+                font-size: 0.8rem;
+            }
+
+            .btn-action {
+                display: block;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            .dashboard-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-dashboard">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <img src="../asstes/supportUnity_Logo_with_Sky_Blue_and_Deep_Navy-removebg-preview.png" alt="SupportUnity Logo">
+                <h2>Moderation</h2>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="#user-management" class="active">User Management</a></li>
+                <li><a href="#campaign-moderation">Campaign Moderation</a></li>
+                <li><a href="#data-access">Data Access</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Toggle Button -->
+        <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Main Content -->
+        <div class="main-content" id="mainContent">
+            <!-- User Management -->
+            <section class="dashboard-section active" id="user-management">
+                <div class="dashboard-card">
+                    <h3 class="dashboard-title">User Management</h3>
+                    <p class="dashboard-subtitle">Approve/reject Campaigner roles and ban users.</p>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersTable">
+                                <!-- Dynamically populated -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Campaign Moderation -->
+            <section class="dashboard-section" id="campaign-moderation">
+                <div class="dashboard-card">
+                    <h3 class="dashboard-title">Campaign Moderation</h3>
+                    <p class="dashboard-subtitle">Approve/reject or delete campaigns.</p>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Creator</th>
+                                    <th>Funding Goal</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="campaignsTable">
+                                <!-- Dynamically populated -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data Access -->
+            <section class="dashboard-section" id="data-access">
+                <div class="dashboard-card">
+                    <h3 class="dashboard-title">Data Access</h3>
+                    <p class="dashboard-subtitle">View all users, campaigns, and pledges.</p>
+                    
+                    <!-- Users Table -->
+                    <h4 class="mb-2">Users</h4>
+                    <div class="table-responsive mb-4">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="allUsersTable">
+                                <!-- Dynamically populated -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Campaigns Table -->
+                    <h4 class="mb-2">Campaigns</h4>
+                    <div class="table-responsive mb-4">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Creator</th>
+                                    <th>Funding Goal</th>
+                                    <th>Raised</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="allCampaignsTable">
+                                <!-- Dynamically populated -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pledges Table -->
+                    <h4 class="mb-2">Pledges</h4>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Backer</th>
+                                    <th>Campaign</th>
+                                    <th>Amount</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pledgesTable">
+                                <!-- Dynamically populated -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/admin.js"></script>
+</body>
+</html>
