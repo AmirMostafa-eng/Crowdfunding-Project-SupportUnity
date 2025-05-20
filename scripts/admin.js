@@ -93,8 +93,8 @@ const allUsersTable = document.getElementById('allUsersTable');
 console.log(allUsersTable);
 
 async function populateUsers() {
-    const users = await returningUsers();
-    // const users = allUsers.filter(user => user.role == 'Pending Campaigner');
+    const allUsers = await returningUsers();
+    const users = allUsers.filter(user => user.role !== 'admin');
     usersTable.innerHTML = '';
     allUsersTable.innerHTML = '';
 
@@ -113,7 +113,8 @@ async function populateUsers() {
                     <button class="btn btn-action btn-reject me-2" id="reject-btn">Reject</button>
                     <button class="btn btn-action btn-ban" id="ban-btn">Ban</button>
                 </td>
-            ` : `
+            ` : 
+            `
                 <td>
                     <button class="btn btn-action btn-ban" id="ban-btn">Ban</button>
                 </td>
@@ -197,9 +198,9 @@ usersTable.addEventListener("click", async function (event) {
 async function populateCampaigns() {
     const campaigns = await returningCampaigns();
     const users = await returningUsers();
-    const campaignsTable = document.getElementById('campaignsTable');
+    // const campaignsTable = document.getElementById('campaignsTable'); 
     const allCampaignsTable = document.getElementById('allCampaignsTable');
-    campaignsTable.innerHTML = '';
+    // campaignsTable.innerHTML = '';
     allCampaignsTable.innerHTML = '';
 
     campaigns.forEach(campaign => {
@@ -225,7 +226,7 @@ async function populateCampaigns() {
                 `}
             </tr>
         `;
-        campaignsTable.innerHTML += row;
+        // campaignsTable.innerHTML += row;
         allCampaignsTable.innerHTML += `
             <tr>
                 <td>${campaign.title}</td>
