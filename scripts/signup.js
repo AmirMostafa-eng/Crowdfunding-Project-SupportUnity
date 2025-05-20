@@ -1,5 +1,5 @@
 // import { json } from "body-parser";
-import { checkValid, returningUsers, switching , addNewUser } from "./utils.js";
+import { checkValid, returningUsers, switching , addNewUser, returningCampaigns } from "./utils.js";
 
 let currentUser = JSON.parse(sessionStorage.getItem("currentUser")) || {};
 if (currentUser) {
@@ -34,6 +34,7 @@ signUpPass.addEventListener("blur",function (event) {
   checkValid(signUpPass , passPattern);
 })
 
+console.log(await returningCampaigns());
 
 const signupForm = document.querySelector("form#signup-form");
 console.log(signupForm);

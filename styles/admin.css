@@ -1,4 +1,4 @@
-        .admin-dashboard {
+        /* .admin-dashboard {
             min-height: 100vh;
             padding: 40px 20px;
             background: #f8f9fa;
@@ -120,6 +120,213 @@
             }
 
             .card-body {
+                padding: 15px;
+            }
+        } */
+
+
+    .admin-dashboard {
+            min-height: 100vh;
+            display: flex;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: white;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar.collapsed {
+            transform: translateX(-250px);
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-header img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .sidebar-header h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar-nav li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-nav a {
+            display: block;
+            padding: 10px 15px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-nav a:hover, .sidebar-nav a.active {
+            background: rgba(108, 92, 231, 0.08);
+            color: var(--primary);
+        }
+
+        .sidebar-nav a.active::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background: var(--primary);
+            margin-top: 5px;
+        }
+
+        .sidebar-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1100;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 80px 20px 40px;
+            margin-left: 250px;
+            transition: margin-left 0.3s ease;
+        }
+
+        .main-content.full-width {
+            margin-left: 0;
+        }
+
+        .dashboard-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .dashboard-section.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .dashboard-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .dashboard-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .table-responsive {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+            padding: 10px;
+        }
+
+        .btn-action {
+            padding: 5px 10px;
+            font-size: 0.85rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-approve {
+            background: var(--gradient);
+            color: white;
+            border: none;
+        }
+
+        .btn-ban, .btn-delete {
+            background: #e74c3c;
+            color: white;
+            border: none;
+        }
+
+        .btn-reject {
+            background: #f39c12;
+            color: white;
+            border: none;
+        }
+
+        @media (max-width: 991.98px) {
+            .sidebar {
+                transform: translateX(-250px);
+            }
+
+            .sidebar.collapsed {
+                transform: translateX(0);
+            }
+
+            .sidebar-toggle {
+                display: block;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .main-content.full-width {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .dashboard-title {
+                font-size: 1.8rem;
+            }
+
+            .table {
+                font-size: 0.8rem;
+            }
+
+            .btn-action {
+                display: block;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            .dashboard-card {
                 padding: 15px;
             }
         }

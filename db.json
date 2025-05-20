@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Amir Mostafa",
       "role": "admin",
       "isActive": true,
@@ -9,7 +9,7 @@
       "password": "amir13579"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Abdelrahman Fawzy",
       "role": "admin",
       "isActive": true,
@@ -17,7 +17,7 @@
       "password": "abdo222002"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Maria Garcia",
       "role": "campaigner",
       "isActive": true,
@@ -25,7 +25,7 @@
       "password": "maria97531"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Sarah Johnson",
       "role": "campaigner",
       "isActive": true,
@@ -33,7 +33,7 @@
       "password": "admin12345"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Olivia Brown",
       "role": "campaigner",
       "isActive": false,
@@ -41,7 +41,7 @@
       "password": "olivia23456"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Michael Chen",
       "role": "campaigner",
       "isActive": true,
@@ -49,7 +49,7 @@
       "password": "michael34567"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Emma Wilson",
       "role": "campaigner",
       "isActive": true,
@@ -57,7 +57,7 @@
       "password": "emma56789"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Robert Martinez",
       "role": "campaigner",
       "isActive": true,
@@ -65,7 +65,7 @@
       "password": "robert78901"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "James Taylor",
       "role": "backer",
       "isActive": true,
@@ -73,7 +73,7 @@
       "password": "james45678"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "James Madison",
       "role": "backer",
       "isActive": true,
@@ -81,7 +81,7 @@
       "password": "james45678"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Jennifer Lopez",
       "role": "backer",
       "isActive": true,
@@ -89,7 +89,7 @@
       "password": "jennifer12345"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Daniel Kim",
       "role": "backer",
       "isActive": true,
@@ -97,7 +97,7 @@
       "password": "daniel67890"
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Sophia Patel",
       "role": "backer",
       "isActive": true,
@@ -105,7 +105,7 @@
       "password": "sophia24680"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Thomas Wright",
       "role": "backer",
       "isActive": false,
@@ -113,7 +113,7 @@
       "password": "thomas13579"
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Hannah Clarke",
       "role": "backer",
       "isActive": true,
@@ -121,7 +121,7 @@
       "password": "hannah97531"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Alexandra Rodriguez",
       "role": "backer",
       "isActive": true,
@@ -129,7 +129,7 @@
       "password": "alex24680"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Marcus Johnson",
       "role": "backer",
       "isActive": true,
@@ -137,7 +137,7 @@
       "password": "marcus13579"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Priya Sharma",
       "role": "backer",
       "isActive": false,
@@ -145,7 +145,7 @@
       "password": "priya86420"
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Lucas Nguyen",
       "role": "backer",
       "isActive": true,
@@ -153,43 +153,27 @@
       "password": "lucas97531"
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Elena Kowalski",
-      "role": "backer",
+      "role": "campaigner",
       "isActive": true,
       "email": "elena@example.com",
       "password": "elena12345"
     },
     {
-      "id": 21,
-      "name": "amir mostafa mohamed",
+      "id": "21",
+      "name": "amir mostafa",
       "role": "backer",
       "isActive": true,
-      "email": "amirmostafa119@gmail.com",
-      "password": "asdfgtyuioiuhyg"
-    },
-    {
-      "id": 22,
-      "name": "amir mostafa mohamed",
-      "role": "backer",
-      "isActive": true,
-      "email": "amirmostafa11@gmail.com",
-      "password": "rehshrtgdfiygjh"
-    },
-    {
-      "id": 23,
-      "name": "amir mostafa mohamed",
-      "role": "backer",
-      "isActive": true,
-      "email": "amirmostafa19@gmail.com",
-      "password": "efghsdfgkjh"
+      "email": "amir@example.com",
+      "password": "elena12345"
     }
   ],
   "campaigns": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Solar-Powered Smart Watch",
-      "creatorId": 1,
+      "creatorId": "3",
       "goal": 7500,
       "deadline": "2025-12-15",
       "isApproved": true,
@@ -227,9 +211,9 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Eco-Friendly Bamboo Bicycle",
-      "creatorId": 2,
+      "creatorId": "4",
       "goal": 15000,
       "deadline": "2025-11-30",
       "isApproved": true,
@@ -267,9 +251,9 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "AI-Powered Home Gardening System",
-      "creatorId": 3,
+      "creatorId": "5",
       "goal": 20000,
       "deadline": "2026-01-20",
       "isApproved": true,
@@ -307,9 +291,9 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Portable Espresso Maker for Travelers",
-      "creatorId": 4,
+      "creatorId": "6",
       "goal": 10000,
       "deadline": "2025-10-10",
       "isApproved": true,
@@ -347,9 +331,9 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Self-Cleaning Water Bottle with UV Purification",
-      "creatorId": 5,
+      "creatorId": "7",
       "goal": 12000,
       "deadline": "2025-09-25",
       "isApproved": true,
@@ -387,9 +371,9 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Modular Smart Backpack with Anti-Theft Tech",
-      "creatorId": 6,
+      "creatorId": "8",
       "goal": 18000,
       "deadline": "2026-02-05",
       "isApproved": true,
@@ -427,9 +411,9 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Reusable Silicone Food Wraps",
-      "creatorId": 7,
+      "creatorId": "3",
       "goal": 8000,
       "deadline": "2025-08-15",
       "isApproved": true,
@@ -467,9 +451,9 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Foldable Electric Scooter",
-      "creatorId": 8,
+      "creatorId": "8",
       "goal": 25000,
       "deadline": "2026-03-10",
       "isApproved": true,
@@ -507,9 +491,9 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Smart Posture Corrector Wearable",
-      "creatorId": 9,
+      "creatorId": "4",
       "goal": 15000,
       "deadline": "2025-11-01",
       "isApproved": true,
@@ -547,9 +531,9 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Handheld Retro Gaming Console",
-      "creatorId": 10,
+      "creatorId": "5",
       "goal": 12000,
       "deadline": "2025-12-01",
       "isApproved": false,
@@ -589,7 +573,7 @@
   ],
   "pledges": [
     {
-      "id": 1,
+      "id": "1",
       "campaignId": 1,
       "userId": 9,
       "amount": 120,
@@ -597,7 +581,7 @@
       "date": "2025-09-05"
     },
     {
-      "id": 2,
+      "id": "2",
       "campaignId": 2,
       "userId": 10,
       "amount": 1200,
@@ -605,7 +589,7 @@
       "date": "2025-08-22"
     },
     {
-      "id": 3,
+      "id": "3",
       "campaignId": 3,
       "userId": 11,
       "amount": 250,
@@ -613,7 +597,7 @@
       "date": "2025-09-10"
     },
     {
-      "id": 4,
+      "id": "4",
       "campaignId": 5,
       "userId": 12,
       "amount": 60,
@@ -621,7 +605,7 @@
       "date": "2025-08-30"
     },
     {
-      "id": 5,
+      "id": "5",
       "campaignId": 2,
       "userId": 13,
       "amount": 50,
@@ -629,7 +613,7 @@
       "date": "2025-09-15"
     },
     {
-      "id": 6,
+      "id": "6",
       "campaignId": 1,
       "userId": 14,
       "amount": 75,
@@ -637,7 +621,7 @@
       "date": "2025-09-18"
     },
     {
-      "id": 7,
+      "id": "7",
       "campaignId": 3,
       "userId": 15,
       "amount": 30,
@@ -645,7 +629,7 @@
       "date": "2025-08-27"
     },
     {
-      "id": 8,
+      "id": "8",
       "campaignId": 4,
       "userId": 16,
       "amount": 120,
@@ -653,7 +637,7 @@
       "date": "2025-09-12"
     },
     {
-      "id": 9,
+      "id": "9",
       "campaignId": 5,
       "userId": 17,
       "amount": 25,
@@ -661,7 +645,7 @@
       "date": "2025-09-07"
     },
     {
-      "id": 10,
+      "id": "10",
       "campaignId": 3,
       "userId": 18,
       "amount": 500,
@@ -669,7 +653,7 @@
       "date": "2025-08-25"
     },
     {
-      "id": 11,
+      "id": "11",
       "campaignId": 2,
       "userId": 19,
       "amount": 350,
@@ -677,7 +661,7 @@
       "date": "2025-09-20"
     },
     {
-      "id": 12,
+      "id": "12",
       "campaignId": 5,
       "userId": 20,
       "amount": 200,
@@ -685,7 +669,7 @@
       "date": "2025-09-11"
     },
     {
-      "id": 13,
+      "id": "13",
       "campaignId": 3,
       "userId": 11,
       "amount": 1000,
@@ -693,7 +677,7 @@
       "date": "2025-09-25"
     },
     {
-      "id": 14,
+      "id": "14",
       "campaignId": 1,
       "userId": 12,
       "amount": 180,
@@ -701,7 +685,7 @@
       "date": "2025-09-16"
     },
     {
-      "id": 15,
+      "id": "15",
       "campaignId": 4,
       "userId": 13,
       "amount": 40,
@@ -709,7 +693,7 @@
       "date": "2025-09-22"
     },
     {
-      "id": 16,
+      "id": "16",
       "campaignId": 5,
       "userId": 14,
       "amount": 150,
@@ -717,7 +701,7 @@
       "date": "2025-09-28"
     },
     {
-      "id": 17,
+      "id": "17",
       "campaignId": 2,
       "userId": 15,
       "amount": 700,
@@ -725,7 +709,7 @@
       "date": "2025-09-17"
     },
     {
-      "id": 18,
+      "id": "18",
       "campaignId": 3,
       "userId": 16,
       "amount": 30,
@@ -733,7 +717,7 @@
       "date": "2025-09-14"
     },
     {
-      "id": 19,
+      "id": "19",
       "campaignId": 4,
       "userId": 17,
       "amount": 180,
@@ -741,7 +725,7 @@
       "date": "2025-09-19"
     },
     {
-      "id": 20,
+      "id": "20",
       "campaignId": 1,
       "userId": 18,
       "amount": 300,

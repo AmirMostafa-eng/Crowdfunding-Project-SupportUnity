@@ -126,7 +126,7 @@ const switching = function (role) {
     break;
 
   case 'backer':
-    window.open('../pages/profile.html' ,"_self"); 
+    window.open('../pages/campaigns.html' ,"_self"); 
     break;
     
     default:
