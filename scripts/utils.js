@@ -108,8 +108,41 @@ const addNewUser = async function (name , email , password) {
     return newUser;
 }
 
+// ==========================================
 
+class Campaign{
+    constructor(id , title , creatorId ,goal ,deadline ,description , category , imageUrl ,location){
+        this.id = `${id}`;
+        this.title = title;
+        this.creatorId = creatorId;
+        this.goal = Number(goal);
+        this.deadline = deadline;
+        this.isApproved = false ;
+        this.numOfBackers = 0;
+        this.description = description;
+        this.currentAmount = 0 ;
+        this.category = category;
+        this.imageUrl = imageUrl;
+        this.location = location;
+    }
+}
 
+const addNewCampaign = async function (title , creatorId ,goal ,deadline ,description , category , imageUrl ,location , rewards) {
+  
+  const campaigns = await returningCampaigns();
+  const campId = campaigns.length + 1 ;
+
+  const newCampaign = new Campaign(campId ,title , creatorId ,goal ,deadline ,description ,category ,imageUrl ,location);
+  newCampaign.rewards = rewards ;
+
+  fetch("http://localhost:3000/campaigns",{
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newCampaign)
+  })
+}
 
 
 
@@ -150,4 +183,4 @@ const formatPrettyDate = (dateString, monthFormat = 'short') => {
 
 
 
-export {returningUsers , returningCampaigns , returningPledges ,checkValid , switching ,formatPrettyDate ,addNewUser}
+export {returningUsers , returningCampaigns , returningPledges ,checkValid , switching ,formatPrettyDate ,addNewUser , addNewCampaign}

@@ -1,3 +1,5 @@
+
+
 // Global variables
 let campaignData = [];
 let currentPage = 1;

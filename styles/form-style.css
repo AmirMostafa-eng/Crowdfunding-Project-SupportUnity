@@ -98,3 +98,7 @@ section.backer h1{
   text-align: center;
   font-size: 40px;
 }
+#image-preview{
+  width: 50%;
+  margin: 20px auto 0;
+}
