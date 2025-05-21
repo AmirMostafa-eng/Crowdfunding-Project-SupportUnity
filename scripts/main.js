@@ -1,8 +1,3 @@
-// fetch('../pages/auth.html')
-// .then(response =>response.text())
-// .then(data =>{
-//     document.getElementById()
-// })
 const currentUser = JSON.parse(sessionStorage.getItem("currentUser")) || {};
 console.log(currentUser);
 
@@ -19,6 +14,7 @@ if (currentUser.name) {
   console.log(currentUser)
 
 }else {
+  
   loggedUser.style.display ='none' ;
 }
 
@@ -28,6 +24,6 @@ document.getElementById("sign-out").addEventListener("click",function () {
   window.open("../index.html","_self");
 })
 
-if (currentUser.role !== 'backer') {
+if (currentUser.role == 'admin' || currentUser.role == 'campaigner') {
   document.querySelector(".hero-cta").style.display= 'none';
 }

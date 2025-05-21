@@ -9,21 +9,14 @@ const backerSection = document.querySelector("section.backer");
 campaignerSection.style.display = 'none':
 backerSection.style.display ='none';
 
-
-let anonymosUser = document.querySelector("#anon");
-let loggedUser = document.querySelector(".logged");
 const navName = document.querySelector(".nav-name");
 
-
 if (currentUser.name) {
-//   anonymosUser.classList.remove("d-flex");
-//   anonymosUser.style.display ='none' ;
-
   navName.textContent = currentUser.name;
   console.log(currentUser)
 
 }else {
-  loggedUser.style.display ='none' ;
+    window.open("../pages/login.html" , '_self');
 }
 
 
@@ -51,7 +44,7 @@ document.getElementById("sign-out").addEventListener("click",function () {
             const nextStep = parseInt(this.getAttribute('data-next'));
             
             // Validate current step before proceeding
-            if (validateStep(currentStep)|| true) {
+            if (validateStep(currentStep)) {
                 showStep(nextStep);
                 updateProgress(nextStep);
             }

@@ -1,4 +1,11 @@
   // Global variables
+const currentUser = JSON.parse(sessionStorage.getItem("currentUser")) || {};
+if (!currentUser.name) {
+  window.open("../pages/login.html" , '_self');
+}
+
+
+
 let campaignData = [];
 let currentPage = 1;
 const campaignsPerPage = 3;
