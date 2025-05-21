@@ -130,7 +130,7 @@ class Campaign{
 const addNewCampaign = async function (title , creatorId ,goal ,deadline ,description , category , imageUrl ,location , rewards) {
   
   const campaigns = await returningCampaigns();
-  const campId = campaigns.length + 1 ;
+  const campId = Number(campaigns[campaigns.length - 1].id) + 1  ;
 
   const newCampaign = new Campaign(campId ,title , creatorId ,goal ,deadline ,description ,category ,imageUrl ,location);
   newCampaign.rewards = rewards ;

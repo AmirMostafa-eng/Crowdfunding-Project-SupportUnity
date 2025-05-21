@@ -3,8 +3,12 @@ const currentUser = JSON.parse(sessionStorage.getItem("currentUser")) || {};
 if (!currentUser.name) {
   window.open("../pages/login.html" , '_self');
 }
+document.querySelector(".nav-name").textContent = currentUser.name ;
 
-
+document.getElementById("sign-out").addEventListener("click",function () {
+  sessionStorage.removeItem("currentUser");
+  window.open("../index.html","_self");
+})
 
 let campaignData = [];
 let currentPage = 1;

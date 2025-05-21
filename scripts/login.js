@@ -15,11 +15,10 @@ console.log(document.querySelector("#login-form .name-error"))
 logInBtn.addEventListener("click", async function (event) {
   event.preventDefault();
     let users = await returningUsers();
-    
-    // console.log(newUser.role);
-    if (users.filter((user) => user.email == logInEmail.value && logInPass.value == user.password).length) {
-
-      if (users.filter((user) => user.email == logInEmail.value && !user.isActive) ) {
+    let user = users.filter((user) => user.email == logInEmail.value && logInPass.value == user.password)[0]
+    console.log(user);
+    if (user) {
+      if (!user.isActive ) {
       document.querySelector("#login-form .name-error").style.color = 'red'; 
       document.querySelector("#login-form .name-error").style.display = 'block'; 
       document.querySelector("#login-form .name-error").textContent = 'this email is banned'; 
