@@ -198,5 +198,28 @@ document.getElementById("sign-out").addEventListener("click",function () {
 // });
 // =============================
 
+const askRoleDiv = document.querySelector(".ask-role");
+const askRole = document.querySelector(".ask-role a");
+
+askRoleDiv.addEventListener("click" , async function (e) {
+    // e.preventDefault();
+    if (e.target == askRole) {
+        alert("your request has been sent!");
+        currentUser.role = "Pending Campaigner";
+        await fetch(`http://localhost:3000/users/${currentUser.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ role: 'Pending Campaigner' })
+        });
+    }
+});
 
 
+(async function () {
+    const response = await fetch(`http://localhost:3000/users/${currentUser.id}`);
+    let user = await response.json();
+    console.log(user.role)
+    if (user.role != 'backer') {
+        askRole.style.display = 'none';
+    }
+})();
