@@ -17,8 +17,14 @@ logInBtn.addEventListener("click", async function (event) {
     let users = await returningUsers();
     
     // console.log(newUser.role);
-    if (users.filter((user) => user.email == logInEmail.value && logInPass.value == user.password ).length) {
+    if (users.filter((user) => user.email == logInEmail.value && logInPass.value == user.password).length) {
 
+      if (users.filter((user) => user.email == logInEmail.value && !user.isActive) ) {
+      document.querySelector("#login-form .name-error").style.color = 'red'; 
+      document.querySelector("#login-form .name-error").style.display = 'block'; 
+      document.querySelector("#login-form .name-error").textContent = 'this email is banned'; 
+      return Error;
+      }
       newUser = users.filter((user) => user.email == logInEmail.value )[0];
       sessionStorage.setItem("currentUser",JSON.stringify(newUser));
       switching(newUser.role)

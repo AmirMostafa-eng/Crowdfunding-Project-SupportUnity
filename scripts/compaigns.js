@@ -1,12 +1,10 @@
-
-
-// Global variables
+  // Global variables
 let campaignData = [];
 let currentPage = 1;
 const campaignsPerPage = 3;
 let filteredCampaigns = [];
 
-// Function to fetch campaign data from new.json
+// Function to fetch campaign data 
 async function fetchCampaignData() {
     try {
         const response = await fetch('../db.json');
@@ -46,9 +44,6 @@ function formatCurrency(amount) {
 }
 
 // Function to generate random backers count
-function getRandomBackers() {
-    return Math.floor(Math.random() * 200) + 50;
-}
 
 // Function to render campaigns for a specific page
 function renderCampaigns(page) {
@@ -82,6 +77,7 @@ function renderCampaigns(page) {
                     <img src="${campaign.imageUrl || "../asstes/Campaign 1.webp"}" alt="${campaign.title}" class="campaign-img">
                 </div>
                 <div class="campaign-content-col">
+                    <span style="display: none;">${campaign.id}</span>
                     <h2 class="campaign-title">${campaign.title}</h2>
                     <p class="campaign-desc">${campaign.description}</p>
                     
@@ -189,6 +185,7 @@ function renderPagination() {
     pagination.appendChild(nextLi);
 }
 
+
 // Function to filter and sort campaigns
 function filterAndSortCampaigns() {
     const categoryFilter = document.getElementById('category-filter').value;
@@ -197,11 +194,12 @@ function filterAndSortCampaigns() {
     // Reset to first page when filters change
     currentPage = 1;
     
-    // Filter by category
+    // Start with all approved campaigns
+    filteredCampaigns = campaignData.campaigns.filter(campaign => campaign.isApproved !== false);
+    
+    // Filter by category if not 'all'
     if (categoryFilter !== 'all') {
-        filteredCampaigns = campaignData.campaigns.filter(campaign => campaign.category === categoryFilter);
-    } else {
-        filteredCampaigns = [...campaignData.campaigns];
+        filteredCampaigns = filteredCampaigns.filter(campaign => campaign.category === categoryFilter);
     }
     
     // Sort campaigns
@@ -221,7 +219,6 @@ function filterAndSortCampaigns() {
     renderCampaigns(currentPage);
     renderPagination();
 }
-
 // Initialize the page
 document.addEventListener('DOMContentLoaded', () => {
     // Fetch campaign data from JSON file
@@ -232,10 +229,17 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('sort-filter').addEventListener('change', filterAndSortCampaigns);
 });
 
+// document.getElementById().parentElement
+document.body.addEventListener("click" , async function (event) {
+    if (event.target.textContent.trim()== 'Support Now') {
+        console.log(event.target.parentElement.children[1].textContent);
+        campaignId = event.target.parentElement.children[0].textContent
 
-const currentUser = JSON.parse(sessionStorage.getItem("currentUser")) || {};
-const navName = document.querySelector(".nav-name");
+        window.open('/pages/purchase.html' , "_self");
 
-if (currentUser) {
-  navName.textContent = currentUser.name;
-}
+        const response = await fetch(`http://localhost:3000/campaigns/${campaignId}`)
+        const selectedCamp = await response.json();
+
+        sessionStorage.setItem("selectedCamp" , JSON.stringify(selectedCamp));
+    }
+})

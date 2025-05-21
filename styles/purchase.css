@@ -1,0 +1,114 @@
+:root {
+    --primary: #6c5ce7;
+    --primary-dark: #5649c0;
+    --gradient: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    --text-dark: #2d3436;
+    --text-light: #636e72;
+    --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+}
+
+.purchase-container {
+    padding: 60px 0;
+    position: relative;
+}
+
+.purchase-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(108, 92, 231, 0.15);
+}
+
+.btn-gradient {
+    background: var(--gradient);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px -5px var(--primary);
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px -5px var(--primary);
+}
+
+.payment-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+}
+
+.modal-content {
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-title {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.modal-body p {
+    color: var(--text-light);
+}
+
+@media (max-width: 767.98px) {
+    .purchase-card {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .btn-gradient {
+        width: 100%;
+    }
+}

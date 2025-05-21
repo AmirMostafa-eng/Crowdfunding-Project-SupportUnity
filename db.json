@@ -208,7 +208,8 @@
           "amount": 300,
           "description": "Limited edition watch with custom engraving & premium support"
         }
-      ]
+      ],
+      "raised": 284
     },
     {
       "id": "2",
@@ -759,6 +760,27 @@
       "amount": 300,
       "rewardId": 4,
       "date": "2025-09-24"
+    },
+    {
+      "id": "5983",
+      "backer": "john@example.com",
+      "campaignId": 1,
+      "amount": 5,
+      "date": "2025-05-21"
+    },
+    {
+      "id": "254d",
+      "backer": "john@example.com",
+      "campaignId": 1,
+      "amount": 50,
+      "date": "2025-05-21"
+    },
+    {
+      "id": "4223",
+      "backer": "john@example.com",
+      "campaignId": 1,
+      "amount": 234,
+      "date": "2025-05-21"
     }
   ]
 }
