@@ -4,6 +4,7 @@
 //     document.getElementById()
 // })
 const currentUser = JSON.parse(sessionStorage.getItem("currentUser")) || {};
+console.log(currentUser);
 
 let anonymosUser = document.querySelector("#anon");
 let loggedUser = document.querySelector(".logged");
@@ -27,4 +28,6 @@ document.getElementById("sign-out").addEventListener("click",function () {
   window.open("../index.html","_self");
 })
 
-
+if (currentUser.role !== 'backer') {
+  document.querySelector(".hero-cta").style.display= 'none';
+}
